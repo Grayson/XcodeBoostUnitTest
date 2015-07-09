@@ -11,6 +11,7 @@
 			isa = PBXAggregateTarget;
 			buildConfigurationList = 1DDD179A1B4E1CAA0030FD69 /* Build configuration list for PBXAggregateTarget "TestRunner" */;
 			buildPhases = (
+				1DDD17A11B4E21D80030FD69 /* ShellScript */,
 			);
 			dependencies = (
 				1DDD17A01B4E20A00030FD69 /* PBXTargetDependency */,
@@ -152,6 +153,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1DDD17A11B4E21D80030FD69 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "exec \"${SRCROOT}/tests/run_tests.sh\"\nexit 1";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1DDD17831B4E1A210030FD69 /* Sources */ = {
