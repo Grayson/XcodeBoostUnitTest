@@ -13,6 +13,7 @@
 			buildPhases = (
 			);
 			dependencies = (
+				1DDD17A01B4E20A00030FD69 /* PBXTargetDependency */,
 			);
 			name = TestRunner;
 			productName = TestRunner;
@@ -23,6 +24,16 @@
 		1DDD17971B4E1AF50030FD69 /* PublicFunctions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1DDD17951B4E1AF50030FD69 /* PublicFunctions.cpp */; };
 		1DDD17981B4E1AF50030FD69 /* PublicFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DDD17961B4E1AF50030FD69 /* PublicFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1DDD179F1B4E20A00030FD69 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1DDD177F1B4E1A210030FD69 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1DDD17861B4E1A210030FD69;
+			remoteInfo = TestLibrary;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1DDD17871B4E1A210030FD69 /* libTestLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTestLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,6 +163,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1DDD17A01B4E20A00030FD69 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1DDD17861B4E1A210030FD69 /* TestLibrary */;
+			targetProxy = 1DDD179F1B4E20A00030FD69 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1DDD17901B4E1A210030FD69 /* Debug */ = {
