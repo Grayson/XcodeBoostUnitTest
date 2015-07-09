@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<!--
+	Directive by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>XcodeBoostUnitTest</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Header -->
+			<div id="header">
+				<h1>Xcode Boost Unit Test</h1>
+				<p>Step by step instructions for executing Boost unit tests in Xcode.</p>
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+
+				<div class="box container">
+					<section>
+						<header>
+							<h2>Basic instructions for setting up tests</h2>
+						</header>
+						<p>The following is a series of brief, step-by-step instructions on setting up a project to compile and run Boost unit tests from Xcode.  These steps assume a workable knowledge of Xcode and how to build projects.  They are intended to provide a short overview of how the associated <a href="https://github.com/Grayson/xcodeboostunittest">demonstration project</a> was set up.</p>
+					</section>
+				</div>
+				
+				<hr />
+
+				<div class="box alt container">
+					<section class="feature left">
+						<a href="images/screenshots/add_target.png" class="image icon fa-plus"><img src="images/screenshots/add_target.png" alt="" /></a>
+						<div class="content">
+							<h3>Step 1</h3>
+							<p>Add a new target to your Xcode project.  This is found under the <strong>New</strong> submenu of the <strong>File</strong> menu. </p>
+						</div>
+					</section>
+					<section class="feature right">
+						<a href="images/screenshots/choose_aggregate.png" class="image icon fa-bullseye"><img src="images/screenshots/choose_aggregate.png" alt="" /></a>
+						<div class="content">
+							<h3>Step 2</h3>
+							<p>Choose the <strong>Aggregate</strong> target under the <strong>Other</strong> group.  Give it a meaningful name.</p>
+						</div>
+					</section>
+					<section class="feature left">
+						<div class="content">
+							<h3>Step 3</h3>
+							<p>Create a folder called "<strong>tests</strong>" at your source root (where you have your Xcode project).</p>
+						</div>
+					</section>
+					<section class="feature right">
+						<div class="content">
+							<h3>Step 4</h3>
+							<p>Create your unit test files in the <strong>tests</strong> folder and add them to your Xcode project.  They should be added to your new aggregate build target. (I'm assuming you already know how to do this).</p>
+						</div>
+					</section>
+					
+					<section class="feature left">
+						<div class="content">
+							<h3>Step 5</h3>
+							<p>Copy the <a href="https://github.com/Grayson/xcodeboostunittest/blob/master/tests/run_tests.sh"><strong>run_tests.sh</strong> shell script</a> from the <a href="https://github.com/Grayson/xcodeboostunittest/">repository</a> into the <strong>tests</strong> folder.</p>
+						</div>
+					</section>
+					
+					<section class="feature right">
+						<a href="images/screenshots/add_header_search_path.png" class="image icon fa-header"><img src="images/screenshots/add_header_search_path.png" alt="" /></a>
+						<div class="content">
+							<h3>Step 6</h3>
+							<p>Configure your <strong>Build Settings</strong> for the aggregate build target.  Set your header search path to wherever your headers are located.</p>
+						</div>
+					</section>
+					
+					<section class="feature left">
+						<a href="images/screenshots/add_linker_flag.png" class="image icon fa-link"><img src="images/screenshots/add_linker_flag.png" alt="" /></a>
+						<div class="content">
+							<h3>Step 7</h3>
+							<p>Set the linker flags for the <strong>Build Settings</strong> of your aggregate build target.</p>
+						</div>
+					</section>
+					
+					<section class="feature right">
+						<a href="images/screenshots/configure_build_phases.png" class="image icon fa-file"><img src="images/screenshots/configure_build_phases.png" alt="" /></a>
+						<div class="content">
+							<h3>Step 8</h3>
+							<p>Configure the <strong>Build Phases</strong> of your aggregate build target.  Your dependencies should include whatever libraries you are linking against that need to be built.  You'll also need to add a <strong>Run Script</strong> phase that executes the script in <strong>tests</strong>.</p>
+						</div>
+					</section>
+					
+					<section class="feature left">
+						<div class="content">
+							<h3><strong>Run Script</strong> code</h3>
+							<pre><code>
+exec "${SRCROOT}/tests/run_tests.sh"
+exit 1								
+							</code></pre>
+						</div>
+					</section>
+					
+					<section class="feature right">
+						<a href="images/screenshots/clean_run.png" class="image icon fa-wrench"><img src="images/screenshots/clean_run.png" alt="" /></a>
+						<div class="content">
+							<h3>Step 9</h3>
+							<p>Choose your aggregate build target and build.</p>
+						</div>
+					</section>
+				</div>
+
+			</div>
+
+		<!-- Footer -->
+			<div id="footer">
+				<div class="container 75%">
+					<ul class="icons">
+						<li><a href="http://twitter.com/Grayson" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="https://github.com/Grayson" class="icon fa-github"><span class="label">Github</span></a></li>
+					</ul>
+
+					<p>Published July, 2015</p>
+					<p>Very special thanks to <a href="http://html5up.net">HTML5 UP</a> for this page template.</p>
+
+				</div>
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
